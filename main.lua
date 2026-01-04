@@ -13,6 +13,10 @@ local Player = Players.LocalPlayer
 
 local scriptToRun = SettingsPlace[PlaceId] or SettingsGame[GameId]
 
+print("PlaceId:", PlaceId)
+print("GameId:", GameId)
+print("Script to run:", scriptToRun and "found" or "not found")
+
 if scriptToRun then
     local success, err = pcall(function()
         loadstring(scriptToRun)()
